@@ -390,6 +390,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, WKNavigationDelegate, WKScri
             // which is what we need for Dynamic-Island-style placement.
             // Regular .floating (level 3) sits below the menu bar.
             window.level = .statusBar
+            window.collectionBehavior = [.canJoinAllSpaces, .fullScreenAuxiliary]
         }
         if config.clickThrough {
             window.ignoresMouseEvents = true
